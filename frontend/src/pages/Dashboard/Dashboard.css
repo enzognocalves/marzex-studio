@@ -1,0 +1,151 @@
+.dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.dashboard-greeting {
+  margin-bottom: 8px;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+.dashboard-description {
+  margin-top: 10px;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+}
+
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--color-text-primary);
+}
+
+.section-header p {
+  margin-top: 6px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.project-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  background: rgba(109, 94, 249, 0.1);
+  color: var(--color-primary);
+  font-size: 22px;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-text-primary);
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.project-card span {
+  margin-top: 8px;
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+.activity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--color-success);
+}
+
+.activity strong {
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+.activity p {
+  margin-top: 4px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.activity > span {
+  margin-left: auto;
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

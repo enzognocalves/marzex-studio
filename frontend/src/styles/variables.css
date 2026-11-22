@@ -1,0 +1,69 @@
+:root {
+  /* =========================
+     CORES PRINCIPAIS
+  ========================= */
+
+  --color-primary: #6d5ef9;
+  --color-primary-light: #8b7ffb;
+  --color-primary-dark: #5a4be8;
+
+  /* =========================
+     BACKGROUNDS (MODO CLARO)
+  ========================= */
+
+  --color-background: #f8fafc; /* Fundo principal limpo */
+  --color-surface: #ffffff;    /* Cartões e painéis em branco */
+  --color-surface-light: #f1f5f9; /* Áreas secundárias / Inputs */
+
+  /* =========================
+     BORDAS (MODO CLARO)
+  ========================= */
+
+  --color-border: #e2e8f0;       /* Bordas suaves */
+  --color-border-light: #cbd5e1; /* Destaque leve em divisórias */
+
+  /* =========================
+     TEXTOS (ALTO CONTRASTE)
+  ========================= */
+
+  --color-text-primary: #0f172a;   /* Texto principal escuro (muito legível) */
+  --color-text-secondary: #475569; /* Subtítulos e rótulos */
+  --color-text-muted: #94a3b8;     /* Textos secundários/desativados */
+
+  /* =========================
+     ESTADOS
+  ========================= */
+
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+  --color-warning: #d97706;
+
+  /* =========================
+     ESPAÇAMENTOS
+  ========================= */
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+  --spacing-3xl: 48px;
+
+  /* =========================
+     BORDER RADIUS
+  ========================= */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* =========================
+     SOMBRAS (SUAVES PARA MODO CLARO)
+  ========================= */
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+}

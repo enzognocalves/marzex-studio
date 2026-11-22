@@ -1,0 +1,343 @@
+.estudio-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Barra de Transporte */
+.transport-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-surface);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.transport-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-play, .btn-stop {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-play.playing {
+  background-color: var(--color-danger, #ef4444);
+}
+
+.btn-stop {
+  background-color: var(--color-text-secondary);
+}
+
+.btn-stop:hover {
+  background-color: var(--color-text-primary);
+}
+
+.bpm-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-surface-light);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.bpm-control input {
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 16px;
+  width: 50px;
+  text-align: center;
+}
+
+.bpm-control input:focus {
+  outline: none;
+}
+
+.master-volume {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+/* Área de Faixas */
+.studio-main {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.studio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 12px;
+}
+
+.studio-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--color-text-primary);
+}
+
+.btn-add-track {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tracks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--color-surface-light);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.track-name-input {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  font-size: 14px;
+  width: 140px;
+  padding: 4px;
+}
+
+.track-name-input:focus {
+  border-bottom: 1px solid var(--color-primary);
+  outline: none;
+}
+
+.track-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-mute, .btn-solo {
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-mute.active {
+  background-color: var(--color-danger, #ef4444);
+  color: #ffffff;
+  border-color: var(--color-danger, #ef4444);
+}
+
+.btn-solo.active {
+  background-color: var(--color-warning, #f59e0b);
+  color: #ffffff;
+  border-color: var(--color-warning, #f59e0b);
+}
+
+.track-volume {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vol-value {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  width: 35px;
+}
+
+/* Grid Sequenciador */
+.track-grid {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  background-color: var(--color-surface);
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+}
+
+.step-cell {
+  flex: 1;
+  height: 28px;
+  background-color: var(--color-surface-light);
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  transition: all 0.15s ease;
+}
+
+.step-cell:hover {
+  background-color: var(--color-border);
+}
+
+.step-cell.accent-step {
+  border-left: 2px solid var(--color-primary);
+}
+
+.step-cell.active-step {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.4);
+}
+
+/* Teclado Virtual / Piano Roll */
+.piano-roll-card {
+  background-color: #0f172a;
+  border-radius: var(--radius-md);
+  border: 1px solid #1e293b;
+  padding: 20px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.piano-roll-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 12px;
+}
+
+.piano-roll-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #818cf8;
+}
+
+.piano-roll-header p {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.active-note-badge {
+  background-color: rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: monospace;
+  color: #c7d2fe;
+}
+
+.keys-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 140px;
+  background-color: #020617;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  user-select: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.white-key {
+  flex: 1;
+  min-width: 45px;
+  height: 120px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0 0 6px 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 8px;
+  align-items: center;
+  color: #1e293b;
+  font-weight: bold;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.white-key.active {
+  background-color: #818cf8 !important;
+  color: #ffffff;
+}
+
+.black-key {
+  width: 28px;
+  height: 72px;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 0 0 4px 4px;
+  margin-left: -14px;
+  margin-right: -14px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 6px;
+  align-items: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 9px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.black-key.active {
+  background-color: #6366f1 !important;
+}
+
+.key-hint {
+  font-size: 8px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Indicador visual de reprodução (Playhead) no grid */
+.step-cell.playing-step {
+  border: 2px solid #38bdf8 !important;
+  background-color: rgba(56, 189, 248, 0.3) !important;
+}

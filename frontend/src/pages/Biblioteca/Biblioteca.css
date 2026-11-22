@@ -1,0 +1,180 @@
+.biblioteca-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.biblioteca-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-surface);
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.biblioteca-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--color-text-primary);
+}
+
+.biblioteca-header p {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.btn-upload {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-upload:hover {
+  filter: brightness(1.1);
+}
+
+/* Filtros e Busca */
+.biblioteca-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  background-color: var(--color-surface-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  color: var(--color-text-primary);
+  font-size: 14px;
+  width: 280px;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.category-filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-btn {
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+/* Grid de Cards */
+.biblioteca-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.biblioteca-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.biblioteca-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.08));
+}
+
+.card-badge {
+  align-self: flex-start;
+  background-color: var(--color-surface-light);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.card-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  color: var(--color-text-primary);
+}
+
+.card-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-card-action {
+  flex: 1;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+}
+
+.btn-card-action.primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-card-action.secondary {
+  background-color: var(--color-surface-light);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
